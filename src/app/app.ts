@@ -38,7 +38,7 @@ export class App implements OnInit {
             if (params['provider'] === 'lti:moodle') {
                 console.log('provider matched! making API call')
         //calling backend instead of calling cookies directly
-                this.http.post<any>('https://web-stg.betayeda.dev/api/v1/lti/auth-cookie-tokens', {}, { withCredentials: true, headers: { 'ngrok-skip-browser-warning': 'true' } })
+                this.http.post<any>('https://web-stg.betayeda.dev/api/v1/lti/auth-cookie-tokens', {}, { withCredentials: true, headers: { '': '' } })
                     .subscribe({
                         next: (data) => {
                             console.log('Data from backend:', data);
